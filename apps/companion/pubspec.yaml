@@ -1,5 +1,5 @@
 name: capy_companion
-description: "Capy Energy phone companion."
+description: "Eaglemetry Companion for Android and iOS."
 publish_to: "none"
 version: 0.1.1+5
 resolution: workspace

@@ -597,7 +597,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    expect(find.text('Capy Companion'), findsOneWidget);
+    expect(find.text('Eaglemetry Companion'), findsOneWidget);
     expect(find.text('Beta available'), findsOneWidget);
     expect(
       find.text("Can't sync? Download the new version of the companion!"),

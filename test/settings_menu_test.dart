@@ -574,7 +574,7 @@ void main() {
         SystemPane(
           telemetryApi: api,
           packageInfo: PackageInfo(
-            appName: 'Capy Energy',
+            appName: 'Eaglemetry',
             packageName: 'com.timhss.capy',
             version: '1.2.3',
             buildNumber: '42',
@@ -585,7 +585,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('App updates'), findsOneWidget);
-    expect(find.text('Capy Energy is up to date'), findsOneWidget);
+    expect(find.text('Eaglemetry is up to date'), findsOneWidget);
     expect(find.text('Roadcast'), findsOneWidget);
     expect(find.text('120 signals, 40 frames @ 60 Hz'), findsOneWidget);
     expect(find.text('ABOUT'), findsOneWidget);

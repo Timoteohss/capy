@@ -105,7 +105,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Capy Energy'**
+  /// **'Eaglemetry Companion'**
   String get appTitle;
 
   /// No description provided for @pairingTitle.
@@ -975,7 +975,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingSlide1Title.
   ///
   /// In en, this message translates to:
-  /// **'Meet Capy'**
+  /// **'Meet Eaglemetry'**
   String get onboardingSlide1Title;
 
   /// No description provided for @onboardingSlide1Body.
@@ -993,7 +993,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingSlide2Body.
   ///
   /// In en, this message translates to:
-  /// **'Capy reads your trips and charges from the car through your cloud account.'**
+  /// **'Eaglemetry reads your trips and charges from the car through your cloud account.'**
   String get onboardingSlide2Body;
 
   /// No description provided for @onboardingSlide3Title.
@@ -1119,7 +1119,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingLoginBody.
   ///
   /// In en, this message translates to:
-  /// **'Log in to your Capy Energy account.'**
+  /// **'Log in to your Eaglemetry account.'**
   String get onboardingLoginBody;
 
   /// No description provided for @onboardingCreateTitle.
@@ -1359,7 +1359,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsAbrpApiKeyHelp.
   ///
   /// In en, this message translates to:
-  /// **'Required. Capy ships with no key of its own, because Iternio limits each key to a few requests per second. Create yours with the (i) button above.'**
+  /// **'Required. Eaglemetry ships with no key of its own, because Iternio limits each key to a few requests per second. Create yours with the (i) button above.'**
   String get settingsAbrpApiKeyHelp;
 
   /// No description provided for @settingsAbrpHelpTitle.
@@ -1383,7 +1383,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsAbrpHelpApiKeySteps.
   ///
   /// In en, this message translates to:
-  /// **'Open the ABRP API keys page below. Go to API Keys, then Create Key. Set App Name to Capy and press Create Key. Copy the new key into the API KEY field.'**
+  /// **'Open the ABRP API keys page below. Go to API Keys, then Create Key. Set App Name to Eaglemetry and press Create Key. Copy the new key into the API KEY field.'**
   String get settingsAbrpHelpApiKeySteps;
 
   /// No description provided for @settingsAbrpHelpApiKeyLink.

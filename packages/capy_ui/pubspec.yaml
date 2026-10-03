@@ -31,6 +31,8 @@ flutter:
   assets:
     - assets/images/car_side.webp
     - assets/images/car_front.webp
+    - assets/images/branding/eaglemetry_icon.png
+    - assets/images/branding/eaglemetry_icon_transparent.png
     # The mascot: one file per expression, per direction. Full-colour art,
     # unlike the line art above: it is never tinted. Cut from the authored
     # sheets; do not commit a sheet.

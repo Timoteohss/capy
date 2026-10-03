@@ -1,6 +1,6 @@
 {
   "en": [
-    "Trip and charge times stay correct when the car clock jumps. Energy charts show the real recorded minutes.",
+    "Eaglemetry and Eaglemetry Companion now show the new eagle icon. Trip and charge times stay correct when the car clock jumps. Energy charts show the real recorded minutes.",
     "While the car waits for the real time, sessions show a 'time not synced' mark. The app does not delete them early.",
     "Trips recorded before the time sync show bars in driving order on the car and on the phone.",
     "When the real time arrives, corrected minutes replace the old minutes in the cloud and on the phone. No wrong minute stays.",
@@ -14,7 +14,7 @@
     "After you reinstall the phone app and sign in, your car link returns by itself. No new pairing code is needed."
   ],
   "pt": [
-    "Os horários de viagem e recarga ficam corretos quando o relógio do carro salta. Os gráficos de energia mostram os minutos reais gravados.",
+    "Eaglemetry e Eaglemetry Companion agora exibem o novo ícone de águia. Os horários de viagem e recarga ficam corretos quando o relógio do carro salta. Os gráficos de energia mostram os minutos reais gravados.",
     "Enquanto o carro aguarda a hora real, as sessões mostram 'hora não sincronizada'. O app não apaga essas sessões antes da hora.",
     "Viagens gravadas antes da sincronização da hora mostram as barras na ordem em que você dirigiu, no carro e no celular.",
     "Quando a hora real chega, os minutos corrigidos substituem os antigos na nuvem e no celular. Nenhum minuto errado fica.",
@@ -28,7 +28,7 @@
     "Depois de reinstalar o app do celular e entrar na conta, seu carro volta vinculado sozinho. Nenhum código novo é preciso."
   ],
   "ru": [
-    "Время поездок и зарядок остаётся верным при скачке часов автомобиля. Графики энергии показывают реально записанные минуты.",
+    "Eaglemetry и Eaglemetry Companion теперь показывают новый значок орла. Время поездок и зарядок остаётся верным при скачке часов автомобиля. Графики энергии показывают реально записанные минуты.",
     "Пока автомобиль ждёт точное время, сессии помечены как «время не синхронизировано». Приложение не удаляет их раньше срока.",
     "Поездки, записанные до синхронизации времени, показывают столбцы в порядке движения на автомобиле и на телефоне.",
     "Когда приходит точное время, исправленные минуты заменяют старые в облаке и на телефоне. Неверные минуты не остаются.",

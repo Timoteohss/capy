@@ -114,7 +114,7 @@ void main() {
     await tester.pumpWidget(_journey(_controller()));
     await tester.pumpAndSettle();
 
-    expect(find.text('Meet Capy'), findsOneWidget);
+    expect(find.text('Meet Eaglemetry'), findsOneWidget);
     expect(find.text('Next'), findsOneWidget);
     expect(find.byKey(const Key('onboarding-code-field')), findsNothing);
   });
@@ -264,7 +264,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byType(OnboardingFlow), findsOneWidget);
-    expect(find.text('Meet Capy'), findsOneWidget);
+    expect(find.text('Meet Eaglemetry'), findsOneWidget);
   });
 
   testWidgets('with an account server the intro leads to the login form', (

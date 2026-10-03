@@ -10,7 +10,7 @@ void main() {
     tester,
   ) async {
     PackageInfo.setMockInitialValues(
-      appName: 'Capy Energy',
+      appName: 'Eaglemetry',
       packageName: 'com.timhss.capy',
       version: '0.4.3',
       buildNumber: '43',
@@ -43,7 +43,7 @@ void main() {
     tester,
   ) async {
     PackageInfo.setMockInitialValues(
-      appName: 'Capy Energy',
+      appName: 'Eaglemetry',
       packageName: 'com.timhss.capy',
       version: '0.8.0',
       buildNumber: '99',

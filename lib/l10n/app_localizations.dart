@@ -105,7 +105,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Capy Energy'**
+  /// **'Eaglemetry'**
   String get appTitle;
 
   /// No description provided for @navBrand.
@@ -2385,7 +2385,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsAppUpdateDescription.
   ///
   /// In en, this message translates to:
-  /// **'Checks the public Capy Energy releases and installs a verified APK without erasing telemetry or settings. It also updates the Roadcast service.'**
+  /// **'Checks the public Eaglemetry releases and installs a verified APK without erasing telemetry or settings. It also updates the Roadcast service.'**
   String get settingsAppUpdateDescription;
 
   /// No description provided for @settingsAppUpdateInstalled.
@@ -2421,7 +2421,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsAppUpdateUpToDate.
   ///
   /// In en, this message translates to:
-  /// **'Capy Energy is up to date'**
+  /// **'Eaglemetry is up to date'**
   String get settingsAppUpdateUpToDate;
 
   /// No description provided for @settingsAppUpdateIncompatible.
@@ -5743,7 +5743,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsExternalChargeControlDesc.
   ///
   /// In en, this message translates to:
-  /// **'Allows controlling charge limits and amperage by delegating actions to the dedicated Geely Charge Control app. By default, Capy Energy operates purely as a telemetry analyzer.'**
+  /// **'Allows controlling charge limits and amperage by delegating actions to the dedicated Geely Charge Control app. By default, Eaglemetry operates purely as a telemetry analyzer.'**
   String get settingsExternalChargeControlDesc;
 
   /// No description provided for @settingsChargeControlNotInstalled.
@@ -5947,7 +5947,7 @@ abstract class AppLocalizations {
   /// No description provided for @v2SyncRegisteredBody.
   ///
   /// In en, this message translates to:
-  /// **'The car registered itself. Open the Capy Energy app on your phone and link the car to your account.'**
+  /// **'The car registered itself. Open the Eaglemetry Companion app on your phone and link the car to your account.'**
   String get v2SyncRegisteredBody;
 
   /// No description provided for @v2SyncRegistered.
@@ -6073,7 +6073,7 @@ abstract class AppLocalizations {
   /// No description provided for @v2SyncPendingBody.
   ///
   /// In en, this message translates to:
-  /// **'Open the Capy Energy app on your phone and type this code. It expires in 5 minutes.'**
+  /// **'Open the Eaglemetry Companion app on your phone and type this code. It expires in 5 minutes.'**
   String get v2SyncPendingBody;
 
   /// No description provided for @v2SyncApprovedBody.
@@ -6103,7 +6103,7 @@ abstract class AppLocalizations {
   /// No description provided for @v2SyncIdleBody.
   ///
   /// In en, this message translates to:
-  /// **'Open the Capy Energy app on your phone. Generate a code here and type it there.'**
+  /// **'Open the Eaglemetry Companion app on your phone. Generate a code here and type it there.'**
   String get v2SyncIdleBody;
 
   /// No description provided for @v2SyncExpiresInMinutes.
@@ -6295,7 +6295,7 @@ abstract class AppLocalizations {
   /// No description provided for @v2SyncCompanionTitle.
   ///
   /// In en, this message translates to:
-  /// **'Capy Companion'**
+  /// **'Eaglemetry Companion'**
   String get v2SyncCompanionTitle;
 
   /// No description provided for @v2SyncCompanionBeta.

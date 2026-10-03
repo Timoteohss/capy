@@ -1,14 +1,14 @@
-# Capy Energy
+# Eaglemetry
 
-Capy Energy records battery, trip, charging, and telemetry history on an
-electric Geely head unit, and shows it on the phone next to it. Two apps
-share two Dart packages:
+Eaglemetry is a fork of Capy Energy. It records battery, trip, charging,
+and telemetry history on an electric Geely head unit, and shows it on the
+phone next to it. Two apps share two Dart packages:
 
 - **Car app** (repository root, Flutter + native Kotlin): runs on the car's
   Android Automotive head unit, collects vehicle signals in a foreground
   service, stores them in Room, and serves them to the phone over the local
   network.
-- **Companion app** (`apps/companion/`, Flutter): runs on Android and iOS,
+- **Eaglemetry Companion** (`apps/companion/`, Flutter): runs on Android and iOS,
   pairs with the car over a six-digit code, pulls sessions over Wi-Fi, and
   uploads them to your own Supabase project when you configure one.
 
@@ -16,8 +16,20 @@ Shared code lives in `packages/telemetry_core` (track encoding, physics,
 sync protocol) and `packages/capy_ui` (design system, see
 `packages/capy_ui/DESIGN.md`).
 
-The project is Apache 2.0 (`LICENSE`). It is published as-is by an owner
-who can no longer maintain it; see the issues for what needs an owner.
+## Origin and license
+
+Eaglemetry is derived from **Capy Energy**, created by **Timoteo Sousa**.
+The original copyright notice is preserved:
+Copyright 2026 Timoteo Sousa <timoteohss@gmail.com>.
+
+This project remains licensed under the [Apache License 2.0](LICENSE).
+The original license and copyright notices are unchanged.
+
+This initial rebrand changes the displayed app names and user-facing text
+to **Eaglemetry** and **Eaglemetry Companion**, with the approved eagle icon.
+The source artwork and regeneration steps are in [assets/branding](assets/branding/README.md).
+Technical identifiers (`capy_energy`, `capy_ui`, `capy_companion`, and
+`com.timhss.*`), database names, and integrations remain unchanged.
 
 ## What car and head unit you need
 

@@ -11,7 +11,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await AppExperienceController.instance.reset();
     PackageInfo.setMockInitialValues(
-      appName: 'Capy Energy',
+      appName: 'Eaglemetry',
       packageName: 'com.timhss.capy',
       version: '0.9.0',
       buildNumber: '90',

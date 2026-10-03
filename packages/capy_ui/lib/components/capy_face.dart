@@ -36,12 +36,13 @@ enum CapyMood {
   winking,
   determined;
 
-  /// Where the art for this mood is, inside the `capy_ui` package.
+  /// The shared Eaglemetry mark used for every status.
   ///
-  /// This is the one place that knows how a file is named. A third direction
-  /// lands as a third [CapyDirection] value and changes nothing else.
+  /// [CapyMood] remains part of the API so existing callers keep compiling.
+  /// A future Eaglemetry expression set can map these states to distinct art
+  /// without changing the widgets that consume them.
   String assetFor(CapyDirection direction) =>
-      'assets/images/mascot/capy_${name}_${direction.suffix}.webp';
+      'assets/images/branding/eaglemetry_icon_transparent.png';
 }
 
 /// Which way the mascot faces.
@@ -60,15 +61,12 @@ enum CapyDirection {
   String get suffix => name;
 }
 
-/// The mascot's head, drawn at [size].
+/// The Eaglemetry mark, drawn at [size].
 ///
-/// The art is full colour and is never tinted: it is a character, not a glyph.
-/// That is the one way it differs from every other image in this package.
+/// The art is full colour and is never tinted.
 ///
-/// Every file is square and the head is centred in it, so a change of mood
-/// swaps the face without moving the head. That is what allows [CapyFace] to
-/// be dropped into a fixed box, and what keeps a mood change from reading as
-/// a layout jump.
+/// The artwork is square and centred, so [CapyFace] can be dropped into a
+/// fixed box without a layout change.
 class CapyFace extends StatelessWidget {
   const CapyFace({
     required this.size,
@@ -111,7 +109,7 @@ class CapyFace extends StatelessWidget {
   }
 }
 
-/// The mascot on a disc, with an optional status badge on its corner.
+/// The Eaglemetry mark on a disc, with an optional status badge on its corner.
 ///
 /// This is the app's mark: the shape the reader learns to look for on a
 /// welcome, a result, or an empty state. The disc is [AppThemeColors.surface],

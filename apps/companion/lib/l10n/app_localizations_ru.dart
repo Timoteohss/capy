@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appTitle => 'Capy Energy';
+  String get appTitle => 'Eaglemetry Companion';
 
   @override
   String get pairingTitle => 'Сопряжение с автомобилем';
@@ -504,7 +504,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get onboardingBack => 'Назад';
 
   @override
-  String get onboardingSlide1Title => 'Знакомьтесь: Capy';
+  String get onboardingSlide1Title => 'Знакомьтесь: Eaglemetry';
 
   @override
   String get onboardingSlide1Body =>
@@ -515,7 +515,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get onboardingSlide2Body =>
-      'Capy читает поездки и заряды автомобиля через вашу учётную запись в облаке.';
+      'Eaglemetry читает поездки и заряды автомобиля через вашу учётную запись в облаке.';
 
   @override
   String get onboardingSlide3Title => 'Сопряжение за секунды';
@@ -591,8 +591,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get onboardingLoginTitle => 'С возвращением';
 
   @override
-  String get onboardingLoginBody =>
-      'Войдите в свою учётную запись Capy Energy.';
+  String get onboardingLoginBody => 'Войдите в свою учётную запись Eaglemetry.';
 
   @override
   String get onboardingCreateTitle => 'Создайте учётную запись';
@@ -725,7 +724,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get settingsAbrpApiKeyHelp =>
-      'Обязательно. У Capy нет своего ключа, потому что Iternio ограничивает каждый ключ несколькими запросами в секунду. Создайте свой кнопкой (i) выше.';
+      'Обязательно. У Eaglemetry нет своего ключа, потому что Iternio ограничивает каждый ключ несколькими запросами в секунду. Создайте свой кнопкой (i) выше.';
 
   @override
   String get settingsAbrpHelpTitle => 'Как подключить ABRP';
@@ -738,7 +737,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get settingsAbrpHelpApiKeySteps =>
-      'Откройте страницу ключей API ABRP ниже. Перейдите в API Keys, затем Create Key. Укажите App Name = Capy и нажмите Create Key. Скопируйте новый ключ в поле API KEY.';
+      'Откройте страницу ключей API ABRP ниже. Перейдите в API Keys, затем Create Key. Укажите App Name = Eaglemetry и нажмите Create Key. Скопируйте новый ключ в поле API KEY.';
 
   @override
   String get settingsAbrpHelpApiKeyLink =>

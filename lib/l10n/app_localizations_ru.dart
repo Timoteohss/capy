@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appTitle => 'Capy Energy';
+  String get appTitle => 'Eaglemetry';
 
   @override
   String get navBrand => 'AUTO';
@@ -1235,7 +1235,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get settingsAppUpdateDescription =>
-      'Проверяет публичные релизы Capy Energy и устанавливает проверенный APK без удаления телеметрии и настроек. Также обновляет службу Roadcast.';
+      'Проверяет публичные релизы Eaglemetry и устанавливает проверенный APK без удаления телеметрии и настроек. Также обновляет службу Roadcast.';
 
   @override
   String settingsAppUpdateInstalled(Object build, Object version) {
@@ -1257,7 +1257,7 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
-  String get settingsAppUpdateUpToDate => 'Capy Energy обновлён';
+  String get settingsAppUpdateUpToDate => 'Eaglemetry обновлён';
 
   @override
   String settingsAppUpdateIncompatible(Object reason) {
@@ -3088,7 +3088,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get settingsExternalChargeControlDesc =>
-      'Позволяет управлять ограничением зарядки и током, делегируя действия выделенному приложению Geely Charge Control. По умолчанию Capy Energy работает только как анализатор телеметрии.';
+      'Позволяет управлять ограничением зарядки и током, делегируя действия выделенному приложению Geely Charge Control. По умолчанию Eaglemetry работает только как анализатор телеметрии.';
 
   @override
   String get settingsChargeControlNotInstalled =>
@@ -3217,7 +3217,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get v2SyncRegisteredBody =>
-      'Автомобиль зарегистрировался сам. Откройте приложение Capy Energy на телефоне и привяжите автомобиль к аккаунту.';
+      'Автомобиль зарегистрировался сам. Откройте приложение Eaglemetry Companion на телефоне и привяжите автомобиль к аккаунту.';
 
   @override
   String get v2SyncRegistered => 'ЗАРЕГИСТРИРОВАН';
@@ -3287,7 +3287,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get v2SyncPendingBody =>
-      'Откройте приложение Capy Energy на телефоне и введите этот код. Он истекает через 5 минут.';
+      'Откройте приложение Eaglemetry Companion на телефоне и введите этот код. Он истекает через 5 минут.';
 
   @override
   String get v2SyncApprovedBody =>
@@ -3307,7 +3307,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get v2SyncIdleBody =>
-      'Откройте приложение Capy Energy на телефоне. Создайте код здесь и введите его там.';
+      'Откройте приложение Eaglemetry Companion на телефоне. Создайте код здесь и введите его там.';
 
   @override
   String get v2SyncExpiresInMinutes => 'Истекает через 5 минут';
@@ -3460,7 +3460,7 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
-  String get v2SyncCompanionTitle => 'Capy Companion';
+  String get v2SyncCompanionTitle => 'Eaglemetry Companion';
 
   @override
   String get v2SyncCompanionBeta => 'Доступна бета';

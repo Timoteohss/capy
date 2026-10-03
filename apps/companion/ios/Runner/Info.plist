@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Capy</string>
+	<string>Eaglemetry Companion</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -31,7 +31,7 @@
 		</dict>
 	</array>
 	<key>CFBundleName</key>
-	<string>Capy</string>
+	<string>Eaglemetry Companion</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -84,11 +84,11 @@
 	</array>
 	<!-- Bluetooth Low Energy live telemetry stream -->
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Capy Energy connects via Bluetooth Low Energy to stream live vehicle telemetry to your phone.</string>
+	<string>Eaglemetry Companion connects via Bluetooth Low Energy to stream live vehicle telemetry to your phone.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Capy Energy connects via Bluetooth Low Energy to stream live vehicle telemetry to your phone.</string>
+	<string>Eaglemetry Companion connects via Bluetooth Low Energy to stream live vehicle telemetry to your phone.</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>Capy Energy uses the local network to find your car and to read the trips it recorded.</string>
+	<string>Eaglemetry Companion uses the local network to find your car and to read the trips it recorded.</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_geelysync._tcp</string>

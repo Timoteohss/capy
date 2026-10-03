@@ -1,6 +1,10 @@
-# Capy Energy companion
+# Eaglemetry Companion
 
-Phone Flutter app for Capy Energy. Android and iOS.
+Phone Flutter app for Eaglemetry. Android and iOS.
+
+Eaglemetry Companion is derived from the Capy Energy companion app.
+See the root [README](../../README.md#origin-and-license) for attribution
+and the preserved [Apache License 2.0](../../LICENSE).
 
 The home screen takes the 6-digit car pairing code. The local archive
 and the sync client are Dart and run without a list of sessions yet.

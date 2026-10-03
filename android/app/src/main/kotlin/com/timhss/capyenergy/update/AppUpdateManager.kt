@@ -218,7 +218,7 @@ class AppUpdateManager internal constructor(
             val manifest = fetchManifest()
             compatibilityError(manifest, installed)?.let(::error)
             require(manifest.versionCode > installed.longVersionCode) {
-                "Capy Energy is already up to date"
+                "Eaglemetry is already up to date"
             }
 
             val candidate = File(appContext.cacheDir, CANDIDATE_FILE)
@@ -266,7 +266,7 @@ class AppUpdateManager internal constructor(
 
     private fun requireNoActiveSession() {
         activeSessionProvider()?.let { type ->
-            error("Capy Energy cannot update while a $type session is active")
+            error("Eaglemetry cannot update while a $type session is active")
         }
     }
 

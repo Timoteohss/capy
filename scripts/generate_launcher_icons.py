@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Generate Android and iOS launcher icons from the mascot asset.
+"""Generate Android, iOS, and web icons from the approved Eaglemetry artwork.
+
+Requires Pillow. The source artwork is preserved; only sizing is applied.
 
 Usage:
     python3 scripts/generate_launcher_icons.py
@@ -14,16 +16,17 @@ import sys
 from PIL import Image
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
-MASCOT_PATH = REPO_ROOT / "packages/capy_ui/assets/images/mascot/capy_happy_front.webp"
-BG_COLOR = (220, 240, 210, 255)  # #DCF0D2 (AppColors.energyGainSubtle)
+ICON_PATH = REPO_ROOT / "assets/branding/eaglemetry-icon.png"
+BG_COLOR = (3, 12, 18, 255)  # Dark backdrop for the approved artwork.
 
 
-def create_adaptive_foreground(mascot: Image.Image, size: int) -> Image.Image:
+def create_adaptive_foreground(artwork: Image.Image, size: int) -> Image.Image:
     canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    # Android safe zone is the central 66-72dp out of 108dp (~67%)
-    mascot_size = int(size * 0.67)
-    scaled = mascot.resize((mascot_size, mascot_size), Image.Resampling.LANCZOS)
-    offset = (size - mascot_size) // 2
+    # The approved square already includes padding around the eagle and gauge.
+    # At 86%, the emblem fits the central 66dp safe circle on a 108dp layer.
+    artwork_size = int(size * 0.86)
+    scaled = artwork.resize((artwork_size, artwork_size), Image.Resampling.LANCZOS)
+    offset = (size - artwork_size) // 2
     canvas.paste(scaled, (offset, offset), scaled)
     return canvas
 
@@ -32,29 +35,19 @@ def create_adaptive_background(size: int) -> Image.Image:
     return Image.new("RGBA", (size, size), BG_COLOR)
 
 
-def create_adaptive_monochrome(mascot: Image.Image, size: int) -> Image.Image:
-    fg = create_adaptive_foreground(mascot, size)
-    _, _, _, a = fg.split()
-    dark_ink = Image.new("L", (size, size), 38)
-    return Image.merge("RGBA", (dark_ink, dark_ink, dark_ink, a))
-
-
-def create_full_icon(mascot: Image.Image, size: int) -> Image.Image:
-    canvas = Image.new("RGBA", (size, size), BG_COLOR)
-    # Full icon: mascot scaled to ~76% centered
-    mascot_size = int(size * 0.76)
-    scaled = mascot.resize((mascot_size, mascot_size), Image.Resampling.LANCZOS)
-    offset = (size - mascot_size) // 2
-    canvas.paste(scaled, (offset, offset), scaled)
-    return canvas
+def create_full_icon(artwork: Image.Image, size: int) -> Image.Image:
+    # Keep the approved composition. iOS requires opaque RGB app icons.
+    return artwork.convert("RGB").resize((size, size), Image.Resampling.LANCZOS)
 
 
 def main() -> int:
-    if not MASCOT_PATH.exists():
-        sys.stderr.write(f"Mascot not found at {MASCOT_PATH}\n")
+    if not ICON_PATH.exists():
+        sys.stderr.write(f"Icon artwork not found at {ICON_PATH}\n")
         return 1
 
-    mascot = Image.open(MASCOT_PATH).convert("RGBA")
+    artwork = Image.open(ICON_PATH).convert("RGBA")
+    if artwork.width != artwork.height:
+        raise ValueError("Icon artwork must be square")
 
     # 1. Android densities
     android_densities = {
@@ -78,7 +71,6 @@ def main() -> int:
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
     <background android:drawable="@mipmap/ic_launcher_background" />
     <foreground android:drawable="@mipmap/ic_launcher_foreground" />
-    <monochrome android:drawable="@mipmap/ic_launcher_monochrome" />
 </adaptive-icon>
 """
         xml_path.write_text(xml_content)
@@ -87,17 +79,18 @@ def main() -> int:
             d_dir = res_dir / density
             d_dir.mkdir(parents=True, exist_ok=True)
 
-            legacy_icon = create_full_icon(mascot, sizes["legacy"])
+            legacy_icon = create_full_icon(artwork, sizes["legacy"])
             legacy_icon.save(d_dir / "ic_launcher.png", "PNG")
 
             bg_icon = create_adaptive_background(sizes["adaptive"])
             bg_icon.save(d_dir / "ic_launcher_background.png", "PNG")
 
-            fg_icon = create_adaptive_foreground(mascot, sizes["adaptive"])
+            fg_icon = create_adaptive_foreground(artwork, sizes["adaptive"])
             fg_icon.save(d_dir / "ic_launcher_foreground.png", "PNG")
 
-            mono_icon = create_adaptive_monochrome(mascot, sizes["adaptive"])
-            mono_icon.save(d_dir / "ic_launcher_monochrome.png", "PNG")
+            # The approved raster has an opaque backdrop, not a monochrome mask.
+            # Do not expose the old mascot or a solid square as a themed icon.
+            (d_dir / "ic_launcher_monochrome.png").unlink(missing_ok=True)
 
         print(f"Generated Android icons in {res_dir}")
 
@@ -121,9 +114,18 @@ def main() -> int:
             w = int(round(base_w * scale))
             h = int(round(base_h * scale))
 
-            icon = create_full_icon(mascot, w)
+            icon = create_full_icon(artwork, w)
             icon.save(ios_iconset_dir / filename, "PNG")
             print(f"Generated iOS icon {filename} ({w}x{h})")
+
+    # 3. Web/PWA icons. The artwork's existing padding protects the emblem
+    # inside the central 80% circle used by maskable icons.
+    web_dir = REPO_ROOT / "web"
+    for size in (192, 512):
+        icon = create_full_icon(artwork, size)
+        icon.save(web_dir / "icons" / f"Icon-{size}.png", "PNG")
+        icon.save(web_dir / "icons" / f"Icon-maskable-{size}.png", "PNG")
+    create_full_icon(artwork, 32).save(web_dir / "favicon.png", "PNG")
 
     print("All launcher icons successfully generated!")
     return 0
